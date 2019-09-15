@@ -1,0 +1,25 @@
+html{
+    background: rgb(150, 100, 6);
+}
+body{
+    border: 2px solid red; 
+}
+h1{
+    font-size: 70px;
+    border: inherit;
+    align-items: center;
+}
+p{
+    color: white;
+    text-decoration: underline;
+} 
+span{
+    /*color: red*/
+}
+#id{
+    background-color: aqua;
+}
+.gefahr{
+    
+    font-weight: bold;
+}
