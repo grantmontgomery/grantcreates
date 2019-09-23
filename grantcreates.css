@@ -1,25 +1,46 @@
-html{
-    background: rgb(150, 100, 6);
+*{
+    box-sizing: border-box;
 }
+
 body{
-    border: 2px solid red; 
+    height: 1000px;
 }
-h1{
-    font-size: 70px;
-    border: inherit;
-    align-items: center;
+
+/* ==================GRID======================= */
+
+
+.container{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
 }
-p{
-    color: white;
-    text-decoration: underline;
-} 
-span{
-    /*color: red*/
+
+[class*="col-"]{
+    float: left;
+    min-height: 1px;
 }
-#id{
-    background-color: aqua;
+
+.col-1{width: 16.666%;}
+.col-2{width: 33.333%;}
+.col-3{width: 50%;}
+.col-6{width: 100%;}
+
+@media (max-width: 1024px){
+   
+    .col-1{width: 33.333%;}
+    .col-2{width: 100%;}
+    .col-3{width: 100%;}
+    .col-6{width: 100%;}
 }
-.gefahr{
-    
-    font-weight: bold;
+
+@media (max-width: 768px){
+   
+    .col-1{width: 50%;}
+    .col-2{width: 100%;}
+    .col-3{width: 100%;}
+    .col-6{width: 100%;}
 }
+
+
+/* ====================NAV========================== */
