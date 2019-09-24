@@ -89,7 +89,7 @@ body{
     height: 35.76px;
     width: auto;
     position: absolute;
-    left: 71px;
+    left: 72px;
     top: 0.35rem;
 }
 
@@ -127,7 +127,8 @@ body{
 }
 
 .contact:hover ~ .email-phone{
-    display: inline-block;
+    display: block;
+    background-color: white;
 }
 
 /* -----------------------------NAV mobile--------------------------------- */
@@ -136,12 +137,55 @@ body{
 @media (max-width: 768px){
    
     .email-phone{width: 50%;}
-    
+    .logo-animate{
+        animation: type;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
 }
 
 @media (max-width: 480px){
    
     .email-phone{width: 100%;}
-    
+    .logo-animate{
+        animation: type;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
 }
 
+/* =============================HEADER===================================== */
+
+header{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 50px;
+    font-family: "Cutive Mono", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+
+}
+
+/* ------------------------------HEADER mobile------------------------------------ */
+
+@media (max-width: 768px){
+    header{
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (max-width: 480px){
+    header{
+        background-color: black;
+        color: white;
+    }
+}
+
+/* ================================SELECTOR=========================================== */
+
+.selector{
+
+}
