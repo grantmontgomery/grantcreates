@@ -20,13 +20,27 @@
     position: absolute;
 }
 
-#missles{
+
+#hero-missles{
     height: 800px;
     width: 1200px;
     position: absolute;
 }
 
-.missle{
+#enemy-missles{
+    height: 800px;
+    width: 1200px;
+    position: absolute;
+}
+
+.enemy-missle{
+    background-image: url('missile2.png');
+    height: 16px;
+    width: 10px;
+    position: absolute;
+}
+
+.hero-missle{
     background-image: url('missile1.png');
     height: 16px;
     width: 10px;

@@ -9,14 +9,22 @@
     <div id="background">
         <div id="hero"></div>
         <div id="enemies"></div>
-        <div id="missles"></div>
+        <div id="hero-missles"></div>
     </div>
     <script>
+        let background_width = document.getElementById('background').offsetWidth;
+        let background_height = document.getElementById('background').offsetHeight;
+        
         let hero = {
             top: 700,
             left: 550,
-        };
-        let missles = [];
+        }
+        
+        let hero_width = document.getElementById('hero').offsetWidth;
+
+        let hero_missles = [];
+
+        let enemy_missles = [];
 
         let enemies = [
             { left: 200, top: 100 },
@@ -35,19 +43,27 @@
             { left: 800, top: 175 },
             { left: 900, top: 175 },
         ];
-        
+    
+       
         document.onkeydown = function(e){
             console.log(e.keyCode);
+            // if (e.keyCode === 37){
+            //     hero.left -= 10;
+            //     moveHero();
+            // }
             if (e.keyCode === 37){
+                if (hero.left > hero_width/2){
                 hero.left -= 10;
                 moveHero();
+                }
             }
             else if (e.keyCode === 39){
+                if (hero.left < background_width - hero_width){
                 hero.left += 10;
-                moveHero();
+                moveHero();}
             }
             else if (e.keyCode === 32){
-                missles.push({
+                hero_missles.push({
                     left: hero.left,
                     top: hero.top,
                 })
@@ -57,22 +73,27 @@
         }
     
         // console.log(document);
+        // function moveHero() {
+        //     document.getElementById('hero').style.left = hero.left + "px";
+        // }
+        
+        
+
         function moveHero() {
             document.getElementById('hero').style.left = hero.left + "px";
         }
+
         function shootHero() {
-            document.getElementById('missles').innerHTML = '';
-            for (let i = 0; i < missles.length; i++){
-                document.getElementById('missles').innerHTML += `<div class='missle' style='left:${missles[i].left}px; top:${missles[i].top}px;'></div>`;
+            document.getElementById('hero-missles').innerHTML = '';
+            for (let i = 0; i < hero_missles.length; i++){
+                document.getElementById('hero-missles').innerHTML += `<div class='hero-missle' style='left:${hero_missles[i].left}px; top:${hero_missles[i].top}px;'></div>`;
             }
-            // missles.forEach(function bruh(missle){
-            //     document.getElementById('missles').innerHTML += `<div class='missle' style='left:${missles.indexOf(missle).left}px; top:${missles.indexOf(missle).top}px;'></div>`;
-            // })
+            
            
         }
-        function misslesfired(){
-            for (let i = 0; i < missles.length; i++){
-                missles[i].top -= 20;
+        function hero_misslesfired(){
+            for (let i = 0; i < hero_missles.length; i++){
+                hero_missles[i].top -= 20;
             }
         }
 
@@ -83,24 +104,26 @@
             }
         }
 
-        function moveEnemies(){
+        function moveEnemies_down(){
             for(let i = 0; i < enemies.length; i++){
                 enemies[i].top += 2;
             }
         }
 
+
+
         function collisionDetection(){
             for (let enemy = 0; enemy < enemies.length; enemy++){
-                for (let missle = 0; missle < missles.length; missle++){
+                for (let missle = 0; missle < hero_missles.length; missle++){
                     console.log("enemies[enemy].top", enemies[enemy].top)
                     if (
-                        (missles[missle].top >= enemies[enemy].top + 50) &&
-                        (missles[missle].top > enemies[enemy].top) &&
-                        (missles[missle].left >= enemies[enemy].left) &&
-                        (missles[missle].left <= enemies[enemy].left + 50)
+                        (hero_missles[missle].top >= enemies[enemy].top + 50) &&
+                        (hero_missles[missle].top > enemies[enemy].top) &&
+                        (hero_missles[missle].left >= enemies[enemy].left) &&
+                        (hero_missles[missle].left <= enemies[enemy].left + 50)
                         ){
                         console.log("HIT!");
-                        missles.splice(missle, 1);
+                        hero_missles.splice(missle, 1);
                         enemies.splice(enemy, 1);
                     }
                 }
@@ -109,9 +132,9 @@
 
         function gameLoop(){
             setTimeout(gameLoop , 50)
-            misslesfired();
+            hero_misslesfired();
             shootHero();
-            moveEnemies();
+            moveEnemies_down();
             drawEnemies();
             collisionDetection()
         }
