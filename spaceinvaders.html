@@ -7,6 +7,7 @@
 
 <body>
     <div id="background">
+        <div class="score">SCORE:</div>
         <div id="hero"></div>
         <div id="enemies"></div>
         <div id="hero-missles"></div>
@@ -131,6 +132,13 @@
         //         }
         // }
         // ENEMIES MOVING DOWN UNTIL HALF OF BACKGROUND HEIGHT
+        // function moveEnemies_down(){
+        //     for(let i = 0; i < enemies.length; i++){
+        //         if (enemies[i].top < background_height/2){
+        //             enemies[i].top += 1;
+        //         }
+        //         }
+        // }
         function moveEnemies_down(){
             for(let i = 0; i < enemies.length; i++){
                 if (enemies[i].top < background_height/2){
@@ -181,7 +189,6 @@
         function enemy_collisionDetection(){
             for (let enemy = 0; enemy < enemies.length; enemy++){
                 for (let missle = 0; missle < hero_missles.length; missle++){
-                    console.log("enemies[enemy].top", enemies[enemy].top)
                     if (hero_missles[missle].top <= enemies[enemy].top + 50 &&
                         (hero_missles[missle].top >= enemies[enemy].top) &&
                         (hero_missles[missle].left >= enemies[enemy].left) &&
@@ -197,21 +204,30 @@
         
         // function under construction VVVVVVV
         
+        // function hero_collisionDetection(){
+        //     for (let missle = 0; missle < enemy_missles.length; missle++){
+        //         if (enemy_missles[missle].top === hero.top  
+        //         && enemy_missles[missle].left === hero.left){
+        //             {
+        //             document.getElementById("hero").remove();
+        //             }
+        //         }
+        //     }
+        // }
+
         function hero_collisionDetection(){
             for (let missle = 0; missle < enemy_missles.length; missle++){
-                console.log("enemies[enemy].top", enemies[enemy].top)
-                if (
-                    (enemy_missles[missle].top >= hero.top + 50) &&
-                    (enemy_missles[missle].top > hero.top) &&
-                    (enemy_missles[missle].left >= hero.left) &&
-                    (enemy_missles[missle].left <= hero.left + 50)
-                    ){
-                    console.log("GAMEOVER!");
-                    hero_missles.splice(missle, 1);
-                    enemies.splice(enemy, 1);
+                if (enemy_missles[missle].top <= hero.top + 50 &&
+                    enemy_missles[missle].top >= hero.top &&
+                    enemy_missles[missle].left >= hero.left &&
+                    enemy_missles[missle].left <= hero.left + 50){
+                    document.getElementById('hero').parentNode.removeChild('hero');
+                        console.log("GAMEOVER!");
                     }
                 }
+        
             }
+        
 
         function gameLoop(){
             setTimeout(gameLoop , 50)
@@ -220,9 +236,10 @@
             shootEnemy();
             shootHero();
             moveEnemies_down();
-            moveEnemies_right();
+            // moveEnemies_left();
             drawEnemies();
             enemy_collisionDetection();
+            // hero_collisionDetection();
         }
         gameLoop();
         //Bonus
