@@ -10,6 +10,7 @@
         <div id="hero"></div>
         <div id="enemies"></div>
         <div id="hero-missles"></div>
+        <div id="enemy-missles"></div>
     </div>
     <script>
         let background_width = document.getElementById('background').offsetWidth;
@@ -60,7 +61,7 @@
             }
             else if (e.keyCode === 32){
                 hero_missles.push({
-                    left: hero.left,
+                    left: hero.left + 12,
                     top: hero.top,
                 })
                 shootHero();
@@ -68,12 +69,6 @@
             }
         }
     
-        // console.log(document);
-        // function moveHero() {
-        //     document.getElementById('hero').style.left = hero.left + "px";
-        // }
-        
-        
 
         function moveHero() {
             document.getElementById('hero').style.left = hero.left + "px";
@@ -87,21 +82,38 @@
         }
 
         function shootEnemy() {
+            if (enemy_missles.length < 5){
+            enemy_missles.push({
+                left: enemies[Math.floor(Math.random() * enemies.length)].left + 20,
+                top: enemies[Math.floor(Math.random() * enemies.length)].top + 35,
+            })
+            }
             document.getElementById('enemy-missles').innerHTML = '';
-            for (let i = 0; i < enemuy_missles.length; i++){
+            for (let i = 0; i < enemy_missles.length; i++){
                 document.getElementById('enemy-missles').innerHTML += `<div class='enemy-missle' style='left:${enemy_missles[i].left}px; top:${enemy_missles[i].top}px;'></div>`;
             }
         }
-        
+
         function hero_misslesfired(){
             for (let i = 0; i < hero_missles.length; i++){
-                hero_missles[i].top -= 20;
+                if (hero_missles[i].top > 0) {
+                    hero_missles[i].top -= 20;
+                } 
+                else{
+                    hero_missles.splice(i, 1);
+                }
+
             }
         }
-
+                
         function enemy_misslesfired(){
             for (let i = 0; i < enemy_missles.length; i++){
-                enemy_missles[i].top += 20;
+                if (enemy_missles[i].top < background_height - 35){
+                    enemy_missles[i].top += 20; 
+                }
+                else{
+                    enemy_missles.splice(i, 1)
+                }
             }
         }
 
@@ -113,38 +125,64 @@
             }
         }
 
+        // function moveEnemies_down(){
+        //     for(let i = 0; i < enemies.length; i++){
+        //         enemies[i].top += 2;
+        //         }
+        // }
+        // ENEMIES MOVING DOWN UNTIL HALF OF BACKGROUND HEIGHT
         function moveEnemies_down(){
             for(let i = 0; i < enemies.length; i++){
-                enemies[i].top += 2;
+                if (enemies[i].top < background_height/2){
+                    enemies[i].top += 1;
+                }
+                }
+        }
+        // ENEMIES MOVING SIDE TO SIDE
+        // function moveEnemies_right(){
+        //     for(let i = 0; i < enemies.length; i++){
+        //         if (enemies[i].left < background_width - 50){
+        //             enemies[i].left += 1;
+        //         }
+        //     }
+        // }
+
+        // function moveEnemies_left(){
+        //     for(let i = 0; i < enemies.length; i++){
+        //         if (enemies[i].left > 12){
+        //             enemies[i].left -= 1} 
+        //     }
+        // }
+
+        function moveEnemies_right(){
+            for(let i = 0; i < enemies.length; i++){
+                if (enemies[i].left < background_width - 50){
+                    enemies[i].left += 1;}
+                else if (enemies[i].left === background_width + 50){
+                    moveEnemies_left();
+                }
+            }
+        }
+
+        function moveEnemies_left(){
+            for(let i = 0; i < enemies.length; i++){
+                if (enemies[i].left > 12){
+                    enemies[i].left -= 1}
+                else if (enemies[i].left === 12){
+                    moveEnemies_right();
+                } 
             }
         }
 
 
-
-        // function enemy_collisionDetection(){
-        //     for (let enemy = 0; enemy < enemies.length; enemy++){
-        //         for (let missle = 0; missle < hero_missles.length; missle++){
-        //             console.log("enemies[enemy].top", enemies[enemy].top)
-        //             if (
-        //                 (hero_missles[missle].top >= enemies[enemy].top + 50) &&
-        //                 (hero_missles[missle].top > enemies[enemy].top) &&
-        //                 (hero_missles[missle].left >= enemies[enemy].left) &&
-        //                 (hero_missles[missle].left <= enemies[enemy].left + 50)
-        //                 ){
-        //                 console.log("HIT!");
-        //                 hero_missles.splice(missle, 1);
-        //                 enemies.splice(enemy, 1);
-        //             }
-        //         }
-        //     }
-        // }
+        
 
 
         function enemy_collisionDetection(){
             for (let enemy = 0; enemy < enemies.length; enemy++){
                 for (let missle = 0; missle < hero_missles.length; missle++){
                     console.log("enemies[enemy].top", enemies[enemy].top)
-                    if (
+                    if (hero_missles[missle].top <= enemies[enemy].top + 50 &&
                         (hero_missles[missle].top >= enemies[enemy].top) &&
                         (hero_missles[missle].left >= enemies[enemy].left) &&
                         (hero_missles[missle].left <= enemies[enemy].left + 50)
@@ -178,17 +216,17 @@
         function gameLoop(){
             setTimeout(gameLoop , 50)
             hero_misslesfired();
+            enemy_misslesfired();
+            shootEnemy();
             shootHero();
             moveEnemies_down();
+            moveEnemies_right();
             drawEnemies();
             enemy_collisionDetection();
         }
         gameLoop();
         //Bonus
-        //Move Hero Top/Down
         //Move Enemies Left/Right as they move down.
-        //Use different missles
-        //have enemies shoot missles
         //Add score
         //Reset
 
