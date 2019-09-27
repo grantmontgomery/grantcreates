@@ -1,0 +1,159 @@
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    border: 0;
+}
+
+/* ==================GRID======================= */
+
+.container{
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+    
+/* }
+
+.row{
+    width: 100%;
+    height: 200px;
+}
+
+[class*="col-"]{
+    float: left;
+    min-height: 1px;
+}
+
+.row::after{
+    content:'';
+    clear: both;
+    display: block;
+}
+
+.col-1{width: 16.666%;}
+.col-2{width: 33.333%;}
+.col-3{width: 50%;}
+.col-6{width: 100%;}
+.col-custom{width: 66.666%} */
+
+/* ----------------------------GRID mobile------------------------------------ */
+
+
+@media (max-width: 768px){
+   
+    .col-1{width: 50%;}
+    .col-2{width: 100%;}
+    .col-3{width: 100%;}
+}
+
+@media (max-width: 480px){
+   
+    .col-1{width: 100%;}
+    .col-2{width: 100%;}
+    .col-3{width: 100%;}
+}
+
+
+
+/* ====================NAV========================== */
+
+.header-nav{
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------NAV logo---------------------- */
+.nav-logo{
+    left: 5%;
+    position: absolute;
+    height: 80%;
+    margin: 0;
+    display: inline-block;
+
+}
+
+.logo-static{
+    height: 60%;
+    width: auto;
+    position: absolute;
+    top: 1rem;
+}
+
+
+.logo-animate{
+    height: 71.52%;
+    width: auto;
+    position: absolute;
+    /* left: 72px;
+    top: 0.35rem; */
+}
+
+
+/* -----------------------NAV contact----------------------- */
+
+
+/* -----------------------------NAV mobile--------------------------------- */
+
+
+
+/* =============================HEADER===================================== */
+.bio{
+    position: relative;
+    width: 100vw;
+    height: 15vh;
+    clear: both;
+}
+.bio>header{
+    text-align: center;
+    font-family: "Cutive Mono", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 10%;
+    padding-left: auto;
+    padding-right: auto;
+    margin: 0;
+}
+
+
+/* ------------------------------HEADER mobile------------------------------------ */
+
+
+/* ===================================PROJECTS=========================================== */
+
+/* ====================================GAME(nimmt den Platz von Projekten bis ich sie fertigen)=================================================== */
+
+.container-game{
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    clear: both;
+    margin: 0;
+}
+
+.game-screen{
+    height: 100%;
+    width: 95%;
+    background-color: black;
+    padding-left: auto;
+    padding-right: auto;
+    margin: 0;
+}
+
+/* ================================SELECTOR=========================================== */
+
+
+/* ---------------------------------SELECTOR mobile-------------------------------------- */
+
+
+
+
+
