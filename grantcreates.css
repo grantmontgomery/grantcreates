@@ -3,8 +3,27 @@
 }
 
 body{
-    height: 1000px;
+    height: 100%;
+    width: 100%;
     margin: 0;
+}
+
+@media(max-width: 1024px){
+    body{
+        background-color: black;
+    }
+}
+}
+@media (max-width: 768px){
+    body{
+        background-color: black;
+    }
+}
+
+@media (max-width: 480px){
+    body{
+        background-color: black;
+    }
 }
 
 /* ==================GRID======================= */
@@ -13,12 +32,11 @@ body{
     width: 95%;
     margin-left: auto;
     margin-right: auto;
-    height: 50vw;
 }
 
 .row{
     width: 100%;
-    height: 200px;
+    height: 33.3333%;
 }
 
 [class*="col-"]{
@@ -33,7 +51,7 @@ body{
 }
 
 .col-1{width: 16.666%;}
-.col-2{width: 33.333%;}
+.col-2{width: 33.333%; height: 100%;}
 .col-3{width: 50%;}
 .col-6{width: 100%;}
 .col-custom{width: 66.666%}
@@ -45,19 +63,6 @@ body{
     .col-1{width: 33.333%;}
 } */
 
-@media (max-width: 768px){
-   
-    .col-1{width: 50%;}
-    .col-2{width: 100%;}
-    .col-3{width: 100%;}
-}
-
-@media (max-width: 480px){
-   
-    .col-1{width: 100%;}
-    .col-2{width: 100%;}
-    .col-3{width: 100%;}
-}
 
 
 
@@ -138,6 +143,13 @@ body{
 
 /* -----------------------------NAV mobile--------------------------------- */
 
+@media (max-width: 1024px){
+    .logo-animate{
+        animation: type;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
 
 @media (max-width: 768px){
    
@@ -159,9 +171,9 @@ body{
     }
 }
 
-/* =============================HEADER===================================== */
+/* =============================BIO===================================== */
 
-header{
+.bio{
     width: 100%;
     height: 100px;
     text-align: center;
@@ -173,7 +185,16 @@ header{
 
 }
 
-/* ------------------------------HEADER mobile------------------------------------ */
+/* ------------------------------BIO mobile------------------------------------ */
+
+@media(max-width: 1024px){
+    header{
+        background-color: black;
+        color: white;
+    }
+}
+
+
 
 @media (max-width: 768px){
     header{
@@ -189,67 +210,55 @@ header{
     }
 }
 
+/* ====================================RECORDING============================================== */
 
-/* ===================================PROJECTS=========================================== */
-
-.projects{
-    grid-template-columns: 1fr 3fr 1fr;
-}
-
-
-/* ====================================GAME(nimmt den Platz von Projekten bis ich sie fertigen)=================================================== */
-
-.game{
+.recording{
+    /* background-color: black; */
+    border: black 1px;
     width: 100%;
-    background: black;
-    height: 300px;
-    border-radius: 25px;
+    height: 15vh;
 }
 
+/* ====================================DRUMKIT(nimmt den Platz von Projekten bis ich sie fertigen)=================================================== */
 
-/* ================================SELECTOR=========================================== */
-
-/* .selector{
-background-color: black;
-width: 95%;
-height: 500px;
-border-radius: 25px;
+.drum-kit{
+    position: relative;
+    background-color: black;
+    height: 500px;
+    width: 500px;
 }
 
-.left{
-float: left;
-position: relative;
+.beat{
+    position: block;
+    /* border: 1px solid white; */
+    height: 95%;
+    width: 95%;
+    background-color: white;
+    margin: 2.5%;
+    position: relative;
+
 }
 
-.right{
-float: right;
-position: relative;
+/* -------------------------------------DRUMKIT mobile--------------------------------------- */
+
+@media (max-width: 1024px){
+    .drum-kit{
+        width: 600px;
+        height: 600px;
+        
+    }
 }
 
-.showcase{
-background-color: black;
-width: 100%;
-height: 250px;
-border-radius: 25px;
-float: center;
-} */
-
-/* ---------------------------------SELECTOR mobile-------------------------------------- */
-
-/* @media (max-width: 768px){
-    header{
-        background-color: black;
-        color: white;
+@media (max-width: 768px){
+    .drum-kit{
+        width: 600px;
+        height: 600px;
     }
 }
 
 @media (max-width: 480px){
-    header{
-        background-color: black;
-        color: white;
+    .drum-kit{
+        width: 325px;
+        height: 325px;
     }
-} */
-
-
-
-
+}
