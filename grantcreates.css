@@ -11,18 +11,24 @@ body{
 @media(max-width: 1024px){
     body{
         background-color: black;
+        height: 100vh;
+        width: 100vw;
     }
 }
-}
+
 @media (max-width: 768px){
     body{
         background-color: black;
+        height: 100vh;
+        width: 100vw;
     }
 }
 
 @media (max-width: 480px){
     body{
         background-color: black;
+        height: 100vh;
+        width: 100vw;
     }
 }
 
@@ -120,10 +126,12 @@ body{
     cursor: default;
 }
 
-.email-phone{
-    background-color: white;
+#email-phone{
+    background-color: black;
+    color: white;
+    opacity: 1;
+    border-top: solid white 1px;
     border-bottom: solid black 1px;
-    /* border-right: solid black 1px; */
     border-left: solid black 1px;
     font-family: 'Cutive Mono', monospace;
     top: 50px;
@@ -136,10 +144,10 @@ body{
     position: absolute;
 }
 
-.contact:hover ~ .email-phone{
+/* .contact:hover ~ #email-phone{
     display: block;
-    background-color: white;
-}
+    background-color: black;
+} */
 
 /* -----------------------------NAV mobile--------------------------------- */
 
@@ -153,7 +161,7 @@ body{
 
 @media (max-width: 768px){
    
-    .email-phone{width: 50%;}
+    #email-phone{width: 50%;}
     .logo-animate{
         animation: type;
         animation-duration: 1s;
@@ -163,13 +171,14 @@ body{
 
 @media (max-width: 480px){
    
-    .email-phone{width: 100%;}
+    #email-phone{width: 100%;}
     .logo-animate{
         animation: type;
         animation-duration: 1s;
         animation-iteration-count: infinite;
     }
 }
+
 
 /* =============================BIO===================================== */
 
@@ -210,13 +219,81 @@ body{
     }
 }
 
-/* ====================================RECORDING============================================== */
+/* ====================================KEYS============================================== */
 
-.recording{
-    /* background-color: black; */
-    border: black 1px;
+.keys>.row>.col-6>.instructions{
+    border: solid black 1px;
+    height: 10vh;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2.5%;
+    text-align: center;
+    font-family: "Cutive Mono", monospace;
+    font-size: 20px;
+    cursor: default;
+}
+.keys>.row>.col-6>.instructions-mobile{
+    border: solid white 1px;
+    color: white;
+    height: 5vh;
     width: 100%;
-    height: 15vh;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20%;
+    text-align: center;
+    font-family: "Cutive Mono", monospace;
+    font-size: 15px;
+    display: none;
+}
+
+/* ----------------------------------------KEYS keys------------------------------------ */
+
+.single-keys{
+    font-family: "Cutive Mono", monospace;
+    text-align: center;
+    display: none;
+    padding: 10%;
+}
+
+
+
+
+/* --------------------------------------KEYS mobile-----------------------------------*/
+
+
+@media (max-width: 1024px){
+    
+    .keys>.row>.col-6>.instructions-mobile{
+        display: block;
+    }
+    
+    .keys>.row>.col-6>.instructions{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    
+    .keys>.row>.col-6>.instructions-mobile{
+        display: block;
+    }
+    
+    .keys>.row>.col-6>.instructions{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    
+    .keys>.row>.col-6>.instructions-mobile{
+        display: block;
+    }
+    
+    .keys>.row>.col-6>.instructions{
+        display: none;
+    }
 }
 
 /* ====================================DRUMKIT(nimmt den Platz von Projekten bis ich sie fertigen)=================================================== */
@@ -238,6 +315,17 @@ body{
     position: relative;
 
 }
+
+
+
+.beat>img{
+    height: 100%;
+    width: auto;
+    padding: 0;
+    display: none;
+    outline-style: none;
+}
+
 
 /* -------------------------------------DRUMKIT mobile--------------------------------------- */
 

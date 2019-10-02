@@ -15,140 +15,126 @@
         <div class="contact">
             contact
         </div>
-        <div class="email-phone">
+        <div id="email-phone">
             <br>email: grant@grantcreates.com<br>
             <br>phone: +1 (310) 953-5718<br>
             <br>
         </div>
     </nav>
     <header class="bio">
-        hi, i'm grant. this site and drum-kit are the first of many software projects i'll be posting. thanks for checking in! 
+        hi, i'm grant. this site and controller are the first of many software projects i'll be posting. thanks for checking in! 
     </header>
-    <div class="container recording">
+    <div class="container keys">
         <div class="row">
             <div class="col-6">
-
+                <div class="instructions">
+                        use your mouse or keyboard to make a beat!<br> hover over this box to see keys and sounds.
+                </div>
+                <div class="instructions-mobile">
+                        tap on the controller to make a beat!
+                </div>
             </div>
         </div>
     </div>
-    
-    
-    <!-- <div class="container drum-kit">
-        <div class="row">
-            <div class="col-2">                                
-                    <div class="beat tink">
-                            <audio data-key="87" src="sounds/tink.wav" id="tink"></audio>
-                    </div>
-            </div>
-            <div class="col-2">
-                <div class="beat ride">
-                    <audio data-key="69" src="sounds/ride.wav" id="ride"></audio>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="beat openhat">
-                    <audio data-key="82" src="sounds/openhat.wav" id="openhat"></audio>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <div class="beat clap">
-                    <audio data-key="83" src="sounds/clap.wav" id="clap">
-
-                    </audio>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="beat hihat">
-                    <audio data-key="68" src="sounds/hihat.wav" id="hihat">
-
-                    </audio>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="beat snare">
-                    <audio data-key="70" src="sounds/snare.wav" id="snare"></audio>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <div class="beat kick">
-                    <audio src="sounds/kick.wav" data-key="88" id="kick"></audio>
-                </div>
-            </div>
-            <div class="col-2 ">
-                <div class="beat tom">
-                    <audio src="sounds/tom.wav" data-key="67" id="tom"></audio>
-                </div>
-            </div>
-            <div class="col-2 ">
-                <div class="beat boom">
-                    <audio src="sounds/boom.wav" data-key="86" id="boom"></audio>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="container drum-kit">
-        <div class="row">
-            <div class="col-2">                                
-                    <div class="beat tink">
-                            <audio data-key="87" src="sounds/tink.wav" id="tink"></audio>
+            <div class="row">
+                <div class="col-2">                                
+                        <div class="beat tink">
+                                <audio data-key="87" src="sounds/tink.wav" id="tink"></audio>
+                                <img data-key="87" src="beatlightup.png" alt="when you hit the beat pad" class="tink">
+                                <div class="single-keys">
+                                    <h1>W</h1>
+                                    <p>tink</p>
+                                </div>
+                        </div>
+                </div>
+                <div class="col-2">
+                    <div class="beat ride">
+                        <audio data-key="69" src="sounds/ride.wav" id="ride"></audio>
+                        <img data-key="69" src="beatlightup.png" alt="when you hit the beat pad" class="ride">
+                        <div class="single-keys">
+                            <h1>E</h1>
+                            <p>ride</p>
+                        </div>
                     </div>
-            </div>
-            <div class="col-2">
-                <div class="beat ride">
-                    <audio data-key="69" src="sounds/ride.wav" id="ride"></audio>
+                </div>
+                <div class="col-2">
+                    <div class="beat openhat">
+                        <audio data-key="82" src="sounds/openhat.wav" id="openhat"></audio>
+                        <img data-key="82" src="beatlightup.png" alt="when you hit the beat pad" class="openhat">
+                        <div class="single-keys">
+                            <h1>R</h1>
+                            <p>openhat</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-2">
-                <div class="beat openhat">
-                    <audio data-key="82" src="sounds/openhat.wav" id="openhat"></audio>
+            <div class="row">
+                <div class="col-2">
+                    <div class="beat clap">
+                        <audio data-key="83" src="sounds/clap.wav" id="clap"></audio>
+                        <img data-key="83" src="beatlightup.png" alt="when you hit the beat pad" class="clap">
+                        <div class="single-keys">
+                            <h1>S</h1>
+                            <p>clap</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="beat hihat">
+                        <audio data-key="68" src="sounds/hihat.wav" id="hihat"></audio>
+                        <img data-key = "68" src="beatlightup.png" alt="when you hit the beat pad" class="hihat">
+                        <div class="single-keys">
+                            <h1>D</h1>
+                            <p>hihat</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="beat snare">
+                        <audio data-key="70" src="sounds/snare.wav" id="snare"></audio>
+                        <img data-key="70" src="beatlightup.png" alt="when you hit the beat pad" class="snare">
+                        <div class="single-keys">
+                            <h1>F</h1>
+                            <p>snare</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="beat kick">
+                        <audio src="sounds/kick.wav" data-key="88" id="kick"></audio>
+                        <img data-key="88" src="beatlightup.png" alt="when you hit the beat pad" class="kick">
+                        <div class="single-keys">
+                            <h1>X</h1>
+                            <p>kick</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 ">
+                    <div class="beat tom">
+                        <audio src="sounds/tom.wav" data-key="67" id="tom"></audio>
+                        <img data-key="67" src="beatlightup.png" alt="when you hit the beat pad" class="tom">
+                        <div class="single-keys">
+                            <h1>C</h1>
+                            <p>tom</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 ">
+                    <div class="beat boom">
+                        <audio src="sounds/boom.wav" data-key="86" id="boom"></audio>
+                        <img data-key="86" src="beatlightup.png" alt="when you hit the beat pad" class="boom">
+                        <div class="single-keys">
+                            <h1>V</h1>
+                            <p>boom</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-2">
-                <div class="beat clap">
-                    <audio data-key="83" src="sounds/clap.wav" id="clap">
 
-                    </audio>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="beat hihat">
-                    <audio data-key="68" src="sounds/hihat.wav" id="hihat">
-
-                    </audio>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="beat snare">
-                    <audio data-key="70" src="sounds/snare.wav" id="snare"></audio>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2">
-                <div class="beat kick">
-                    <audio src="sounds/kick.wav" data-key="88" id="kick"></audio>
-                </div>
-            </div>
-            <div class="col-2 ">
-                <div class="beat tom">
-                    <audio src="sounds/tom.wav" data-key="67" id="tom"></audio>
-                </div>
-            </div>
-            <div class="col-2 ">
-                <div class="beat boom">
-                    <audio src="sounds/boom.wav" data-key="86" id="boom"></audio>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 </body>
