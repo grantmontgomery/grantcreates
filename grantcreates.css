@@ -124,6 +124,7 @@ body{
     position: absolute;
     font-family: 'Cutive Mono', monospace;
     cursor: default;
+    cursor: pointer;
 }
 
 #email-phone{
@@ -144,14 +145,17 @@ body{
     position: absolute;
 }
 
-/* .contact:hover ~ #email-phone{
-    display: block;
-    background-color: black;
-} */
 
 /* -----------------------------NAV mobile--------------------------------- */
 
 @media (max-width: 1024px){
+    #email-phone{
+        height: 45px;
+        font-size: 10px;
+        float: left;
+        width: 100vw;
+        border-bottom: 1px solid white;
+    }
     .logo-animate{
         animation: type;
         animation-duration: 1s;
@@ -160,8 +164,13 @@ body{
 }
 
 @media (max-width: 768px){
-   
-    #email-phone{width: 50%;}
+    #email-phone{
+        height: 45px;
+        font-size: 10px;
+        float: left;
+        width: 100vw;
+        border-bottom: 1px solid white;
+    }
     .logo-animate{
         animation: type;
         animation-duration: 1s;
@@ -170,8 +179,13 @@ body{
 }
 
 @media (max-width: 480px){
-   
-    #email-phone{width: 100%;}
+    #email-phone{
+        height: 45px;
+        font-size: 10px;
+        float: left;
+        width: 100vw;
+        border-bottom: 1px solid white;
+    }
     .logo-animate{
         animation: type;
         animation-duration: 1s;
@@ -197,25 +211,40 @@ body{
 /* ------------------------------BIO mobile------------------------------------ */
 
 @media(max-width: 1024px){
-    header{
+    .bio{
         background-color: black;
         color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
 
 
 @media (max-width: 768px){
-    header{
+    .bio{
         background-color: black;
         color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
 @media (max-width: 480px){
-    header{
+    .bio{
         background-color: black;
         color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+@media (max-width: 375px){
+    .bio{
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
 
@@ -246,6 +275,7 @@ body{
     font-family: "Cutive Mono", monospace;
     font-size: 15px;
     display: none;
+    pointer-events: none;
 }
 
 /* ----------------------------------------KEYS keys------------------------------------ */
@@ -294,6 +324,25 @@ body{
     .keys>.row>.col-6>.instructions{
         display: none;
     }
+}
+
+
+
+@media (max-width: 375px){
+    
+    .keys>.row>.col-6>.instructions-mobile{
+    height: 5vh;
+    width: 100%;
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+    text-align: center;
+    font-family: "Cutive Mono", monospace;
+    font-size: 12px;
+    display: block;
+    }
+    
 }
 
 /* ====================================DRUMKIT(nimmt den Platz von Projekten bis ich sie fertigen)=================================================== */
@@ -348,5 +397,13 @@ body{
     .drum-kit{
         width: 325px;
         height: 325px;
+    }
+}
+
+
+@media (max-width: 375px){
+    .drum-kit{
+        width: 275px;
+        height: 275px;
     }
 }

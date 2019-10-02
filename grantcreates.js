@@ -63,18 +63,22 @@ window.addEventListener('mouseout', function(e){
 
 // ---------------------------------MouseFunction contact-------------------------------
 
-window.addEventListener('click', function(e){
-    if(e.path[0].className === 'contact'){
-        document.getElementById('email-phone').style.display = 'block'
-        if (document.getElementById('email-phone').style.display === 'block'){
-            document.getElementById('email-phone').style.display = ''
-        }
-    }
-    else{
-        return;
-    }
-})
 
+
+window.addEventListener('click', function(e){
+    let email_phone = document.getElementById('email-phone')
+    if(e.path[0].className === 'contact' && email_phone.style.display === ''){
+            email_phone.style.display = 'block';}
+
+    else if(e.path[0].className === 'contact' && email_phone.style.display === 'block'){
+        email_phone.style.display = '';}
+
+    })
+
+
+    
+
+    
 // ==========================TouchFunction==============================
 
 // -----------------------------TouchFunction controller-----------------------
@@ -94,4 +98,18 @@ window.addEventListener('touchstart', function(e){
         }
     })
 })
+
+// -------------------------TouchFunction contact------------------------
+
+window.addEventListener('touchstart', function(e){
+    let email_phone = document.getElementById('email-phone')
+    if(e.path[0].className === 'contact' && email_phone.style.display === ''){
+        e.preventDefault();    
+        email_phone.style.display = 'block';}
+
+    else if(e.path[0].className === 'contact' && email_phone.style.display === 'block'){
+        e.preventDefault();
+        email_phone.style.display = '';}
+    })
+
 
