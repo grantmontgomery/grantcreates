@@ -117,7 +117,7 @@ body{
 
 /* -----------------------NAV contact----------------------- */
 
-.contact{
+#contact{
     right: 5%;
     top: 1.1rem;
     color: white;
@@ -254,7 +254,7 @@ body{
 
 /* ====================================KEYS============================================== */
 
-.keys>.row>.col-6>.instructions{
+.keys>.row>.col-6>#instructions{
     border: solid black 1px;
     height: 10vh;
     width: 50%;
@@ -266,7 +266,7 @@ body{
     font-size: 20px;
     cursor: default;
 }
-.keys>.row>.col-6>.instructions-mobile{
+.keys>.row>.col-6>#instructions-mobile{
     border: solid white 1px;
     color: white;
     height: 5vh;
@@ -301,42 +301,42 @@ body{
 
 @media (max-width: 1024px){
     
-    .keys>.row>.col-6>.instructions-mobile{
+    .keys>.row>.col-6>#instructions-mobile{
         display: block;
     }
     
-    .keys>.row>.col-6>.instructions{
+    .keys>.row>.col-6>#instructions{
         display: none;
     }
 }
 
 @media (max-width: 768px){
     
-    .keys>.row>.col-6>.instructions-mobile{
+    .keys>.row>.col-6>#instructions-mobile{
         display: block;
     }
     
-    .keys>.row>.col-6>.instructions{
+    .keys>.row>.col-6>#instructions{
         display: none;
     }
 }
 
 @media (max-width: 480px){
     
-    .keys>.row>.col-6>.instructions-mobile{
+    .keys>.row>.col-6>#instructions-mobile{
         display: block;
     }
     
-    .keys>.row>.col-6>.instructions{
+    .keys>.row>.col-6>#instructions{
         display: none;
     }
 }
-
+`
 
 
 @media (max-width: 375px){
     
-    .keys>.row>.col-6>.instructions-mobile{
+    .keys>.row>.col-6>#instructions-mobile{
     height: 5vh;
     width: 100%;
     margin-top: 5%;

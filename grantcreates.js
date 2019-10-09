@@ -19,16 +19,154 @@ window.addEventListener('keyup', function(e){
 
 // ---------------------MouseFunction controller------------------------
 
-window.addEventListener('mousedown', function(e){
-    let light = e.srcElement.childNodes[3]
-    let audio = document.getElementById(e.srcElement.classList[1])
+const tink = document.getElementsByClassName('tink')
+const ride = document.getElementsByClassName('ride')
+const openhat = document.getElementsByClassName('openhat')
+const clap = document.getElementsByClassName('clap')
+const hihat = document.getElementsByClassName('hihat')
+const snare = document.getElementsByClassName('snare')
+const kick = document.getElementsByClassName('kick')
+const tom = document.getElementsByClassName('tom')
+const boom = document.getElementsByClassName('boom')
+
+tink[0].addEventListener('mousedown', function(){
+    let light = tink[1]
+    let audio = document.getElementById('tink')
     if (light.style.display === ""){
         light.style.display = "block"
         if(!audio){ return;}
         audio.currentTime = 0;
         audio.play();
     }
-    window.addEventListener('mouseup', function(e){
+    tink[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+ride[0].addEventListener('mousedown', function(){
+    let light = ride[1]
+    let audio = document.getElementById('ride')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    ride[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+openhat[0].addEventListener('mousedown', function(){
+    let light = openhat[1]
+    let audio = document.getElementById('openhat')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    openhat[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+clap[0].addEventListener('mousedown', function(){
+    let light = clap[1]
+    let audio = document.getElementById('clap')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    clap[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+hihat[0].addEventListener('mousedown', function(){
+    let light = hihat[1]
+    let audio = document.getElementById('hihat')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    hihat[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+snare[0].addEventListener('mousedown', function(){
+    let light = snare[1]
+    let audio = document.getElementById('snare')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    snare[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+kick[0].addEventListener('mousedown', function(){
+    let light = kick[1]
+    let audio = document.getElementById('kick')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    kick[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+tom[0].addEventListener('mousedown', function(){
+    let light = tom[1]
+    let audio = document.getElementById('tom')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    tom[0].addEventListener('mouseup', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+boom[0].addEventListener('mousedown', function(){
+    let light = boom[1]
+    let audio = document.getElementById('boom')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    boom[0].addEventListener('mouseup', function(){
         if (light.style.display === "block"){
             light.style.display = "";
         }
@@ -37,42 +175,38 @@ window.addEventListener('mousedown', function(e){
 
 // ----------------------MouseFunction instructions--------------------------
 
-window.addEventListener('mouseover', function(e){
-    let singlekeys = document.getElementsByClassName('single-keys')
-    if (e.path[0].attributes[0].textContent === "instructions"){
+const instructions = document.getElementById('instructions')
+const singlekeys = document.getElementsByClassName('single-keys')
+
+instructions.addEventListener('mouseover', function(){
+
         for(let i = 0; i < singlekeys.length; i++){
             singlekeys[i].style.display = "block";
         }
-    }
-    else{
-        return;
-    }    
+    
+   
 })
 
-window.addEventListener('mouseout', function(e){
-    let singlekeys = document.getElementsByClassName('single-keys')
-    if (e.path[0].attributes[0].textContent === "instructions"){
+instructions.addEventListener('mouseout', function(){
+   
         for(let i = 0; i < singlekeys.length; i++){
             singlekeys[i].style.display = "";
         }
-    }
-    else{
-        return;
-    }   
+    
 })
 
 // ---------------------------------MouseFunction contact-------------------------------
 
 
+const contact = document.getElementById('contact')
+const email_phone = document.getElementById('email-phone')
 
-window.addEventListener('click', function(e){
-    let email_phone = document.getElementById('email-phone')
-    if(e.path[0].className === 'contact' && email_phone.style.display === ''){
+contact.addEventListener('click', function(){
+    if(email_phone.style.display === ''){
             email_phone.style.display = 'block';}
 
-    else if(e.path[0].className === 'contact' && email_phone.style.display === 'block'){
+    else if(email_phone.style.display === 'block'){
         email_phone.style.display = '';}
-
     })
 
 
@@ -82,32 +216,179 @@ window.addEventListener('click', function(e){
 // ==========================TouchFunction==============================
 
 // -----------------------------TouchFunction controller-----------------------
-window.addEventListener('touchstart', function(e){
-    let light = e.srcElement.childNodes[3]
-    let audio = document.getElementById(e.srcElement.classList[1])
+
+// Variables ass mentioned above in MouseFunction controller
+
+
+// const tink = document.getElementsByClassName('tink')
+// const ride = document.getElementsByClassName('ride')
+// const openhat = document.getElementsByClassName('openhat')
+// const clap = document.getElementsByClassName('clap')
+// const hihat = document.getElementsByClassName('hihat')
+// const snare = document.getElementsByClassName('snare')
+// const kick = document.getElementsByClassName('kick')
+// const tom = document.getElementsByClassName('tom')
+// const boom = document.getElementsByClassName('boom')
+
+
+tink[0].addEventListener('touchstart', function(){
+    let light = tink[1]
+    let audio = document.getElementById('tink')
     if (light.style.display === ""){
         light.style.display = "block"
         if(!audio){ return;}
         audio.currentTime = 0;
         audio.play();
     }
-    window.addEventListener('touchend', function(e){
-        e.preventDefault()
+    tink[0].addEventListener('touchend', function(){
         if (light.style.display === "block"){
             light.style.display = "";
         }
     })
 })
 
+ride[0].addEventListener('touchstart', function(){
+    let light = ride[1]
+    let audio = document.getElementById('ride')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    ride[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+openhat[0].addEventListener('touchstart', function(){
+    let light = openhat[1]
+    let audio = document.getElementById('openhat')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    openhat[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+clap[0].addEventListener('touchstart', function(){
+    let light = clap[1]
+    let audio = document.getElementById('clap')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    clap[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+hihat[0].addEventListener('touchstart', function(){
+    let light = hihat[1]
+    let audio = document.getElementById('hihat')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    hihat[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+snare[0].addEventListener('touchstart', function(){
+    let light = snare[1]
+    let audio = document.getElementById('snare')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    snare[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+kick[0].addEventListener('touchstart', function(){
+    let light = kick[1]
+    let audio = document.getElementById('kick')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    kick[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+tom[0].addEventListener('touchstart', function(){
+    let light = tom[1]
+    let audio = document.getElementById('tom')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    tom[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+boom[0].addEventListener('touchstart', function(){
+    let light = boom[1]
+    let audio = document.getElementById('boom')
+    if (light.style.display === ""){
+        light.style.display = "block"
+        if(!audio){ return;}
+        audio.currentTime = 0;
+        audio.play();
+    }
+    boom[0].addEventListener('touchend', function(){
+        if (light.style.display === "block"){
+            light.style.display = "";
+        }
+    })
+})
+
+
 // -------------------------TouchFunction contact------------------------
 
-window.addEventListener('touchstart', function(e){
-    let email_phone = document.getElementById('email-phone')
-    if(e.path[0].className === 'contact' && email_phone.style.display === ''){
+// As mentioned above in MouseFunction contact
+
+// const contact = document.getElementById('contact')
+// const email_phone = document.getElementById('email-phone')
+
+contact.addEventListener('touchstart', function(){
+    if(email_phone.style.display === ''){
         e.preventDefault();    
         email_phone.style.display = 'block';}
 
-    else if(e.path[0].className === 'contact' && email_phone.style.display === 'block'){
+    else if(email_phone.style.display === 'block'){
         e.preventDefault();
         email_phone.style.display = '';}
     })
