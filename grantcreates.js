@@ -29,149 +29,149 @@ const kick = document.getElementsByClassName('kick')
 const tom = document.getElementsByClassName('tom')
 const boom = document.getElementsByClassName('boom')
 
-tink[0].addEventListener('mousedown', function(){
-    let light = tink[1]
-    let audio = document.getElementById('tink')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    tink[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// tink[0].addEventListener('mousedown', function(){
+//     let light = tink[1]
+//     let audio = document.getElementById('tink')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     tink[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-ride[0].addEventListener('mousedown', function(){
-    let light = ride[1]
-    let audio = document.getElementById('ride')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    ride[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// ride[0].addEventListener('mousedown', function(){
+//     let light = ride[1]
+//     let audio = document.getElementById('ride')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     ride[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-openhat[0].addEventListener('mousedown', function(){
-    let light = openhat[1]
-    let audio = document.getElementById('openhat')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    openhat[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// openhat[0].addEventListener('mousedown', function(){
+//     let light = openhat[1]
+//     let audio = document.getElementById('openhat')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     openhat[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-clap[0].addEventListener('mousedown', function(){
-    let light = clap[1]
-    let audio = document.getElementById('clap')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    clap[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// clap[0].addEventListener('mousedown', function(){
+//     let light = clap[1]
+//     let audio = document.getElementById('clap')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     clap[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-hihat[0].addEventListener('mousedown', function(){
-    let light = hihat[1]
-    let audio = document.getElementById('hihat')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    hihat[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// hihat[0].addEventListener('mousedown', function(){
+//     let light = hihat[1]
+//     let audio = document.getElementById('hihat')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     hihat[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-snare[0].addEventListener('mousedown', function(){
-    let light = snare[1]
-    let audio = document.getElementById('snare')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    snare[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// snare[0].addEventListener('mousedown', function(){
+//     let light = snare[1]
+//     let audio = document.getElementById('snare')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     snare[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-kick[0].addEventListener('mousedown', function(){
-    let light = kick[1]
-    let audio = document.getElementById('kick')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    kick[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// kick[0].addEventListener('mousedown', function(){
+//     let light = kick[1]
+//     let audio = document.getElementById('kick')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     kick[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-tom[0].addEventListener('mousedown', function(){
-    let light = tom[1]
-    let audio = document.getElementById('tom')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    tom[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// tom[0].addEventListener('mousedown', function(){
+//     let light = tom[1]
+//     let audio = document.getElementById('tom')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     tom[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
-boom[0].addEventListener('mousedown', function(){
-    let light = boom[1]
-    let audio = document.getElementById('boom')
-    if (light.style.display === ""){
-        light.style.display = "block"
-        if(!audio){ return;}
-        audio.currentTime = 0;
-        audio.play();
-    }
-    boom[0].addEventListener('mouseup', function(){
-        if (light.style.display === "block"){
-            light.style.display = "";
-        }
-    })
-})
+// boom[0].addEventListener('mousedown', function(){
+//     let light = boom[1]
+//     let audio = document.getElementById('boom')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     boom[0].addEventListener('mouseup', function(){
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
 
 // ----------------------MouseFunction instructions--------------------------
 
@@ -229,6 +229,8 @@ contact.addEventListener('click', function(){
 // const kick = document.getElementsByClassName('kick')
 // const tom = document.getElementsByClassName('tom')
 // const boom = document.getElementsByClassName('boom')
+
+
 
 
 tink[0].addEventListener('touchstart', function(){
@@ -374,6 +376,164 @@ boom[0].addEventListener('touchstart', function(){
         }
     })
 })
+
+
+
+
+// tink[0].addEventListener('touchstart', function(){
+//     let light = tink[1]
+//     let audio = document.getElementById('tink')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     tink[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// ride[0].addEventListener('touchstart', function(){
+//     let light = ride[1]
+//     let audio = document.getElementById('ride')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     ride[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// openhat[0].addEventListener('touchstart', function(){
+//     let light = openhat[1]
+//     let audio = document.getElementById('openhat')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     openhat[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// clap[0].addEventListener('touchstart', function(){
+//     let light = clap[1]
+//     let audio = document.getElementById('clap')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     clap[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// hihat[0].addEventListener('touchstart', function(){
+//     let light = hihat[1]
+//     let audio = document.getElementById('hihat')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     hihat[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// snare[0].addEventListener('touchstart', function(){
+//     let light = snare[1]
+//     let audio = document.getElementById('snare')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     snare[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// kick[0].addEventListener('touchstart', function(){
+//     let light = kick[1]
+//     let audio = document.getElementById('kick')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     kick[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// tom[0].addEventListener('touchstart', function(){
+//     let light = tom[1]
+//     let audio = document.getElementById('tom')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     tom[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+// boom[0].addEventListener('touchstart', function(){
+//     let light = boom[1]
+//     let audio = document.getElementById('boom')
+//     if (light.style.display === ""){
+//         light.style.display = "block"
+//         if(!audio){ return;}
+//         audio.currentTime = 0;
+//         audio.play();
+//     }
+//     boom[0].addEventListener('touchend', function(){
+//         event.preventDefault()
+//         if (light.style.display === "block"){
+//             light.style.display = "";
+//         }
+//     })
+// })
+
+
 
 
 // -------------------------TouchFunction contact------------------------
