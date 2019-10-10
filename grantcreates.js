@@ -545,11 +545,11 @@ boom[0].addEventListener('touchstart', function(){
 
 contact.addEventListener('touchstart', function(){
     if(email_phone.style.display === ''){
-        e.preventDefault();    
+        event.preventDefault();    
         email_phone.style.display = 'block';}
 
     else if(email_phone.style.display === 'block'){
-        e.preventDefault();
+        event.preventDefault();
         email_phone.style.display = '';}
     })
 
